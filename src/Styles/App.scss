@@ -1,24 +1,24 @@
-$imagepath : "../assets/weatherbg";
-$primary : white;
-$secondary : black;
-*{
+$imagepath: "../assets/snowbg";
+$primary: white;
+$secondary: black;
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
-@mixin backdropFilter($x){
-	backdrop-filter: blur( $x );
-	-webkit-backdrop-filter: blur( $x );
+@mixin backdropFilter($x) {
+	backdrop-filter: blur($x);
+	-webkit-backdrop-filter: blur($x);
 }
-@mixin textShadow($x, $y, $color){
+@mixin textShadow($x, $y, $color) {
 	text-shadow: $x $y $color;
 }
-glassmorphirm{
-background: rgba( 250,250,250, 0.3 );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+glassmorphirm {
+	background: rgba(250, 250, 250, 0.3);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
 }
-body{
+body {
 	font-family: monospace;
 	background: url(#{$imagepath}.jpg);
 	background-size: cover;
@@ -28,66 +28,64 @@ body{
 	display: flex;
 	justify-content: center;
 }
-.main{
 
-	
-	.search-bar{
+.main {
+	.search-bar {
+		text-align: center;
 		padding: 1rem;
 		font-size: 1.5rem;
 		@extend glassmorphirm;
-		background: rgba( 250,250,250, 0.1 );
+		background: rgba(250, 250, 250, 0.5);
 	}
-	.search-bar::placeholder{
-		color: #{$primary};
+	.search-bar::placeholder {
+		color: #{$secondary};
 		opacity: 50%;
 		text-align: center;
 	}
-	.search-bar:focus{
-		outline: none!important;
+	.search-bar:focus {
+		outline: none !important;
 		@extend glassmorphirm;
-		box-shadow: 0px 5px 60px rgba(255,255,255,0.4);
+		box-shadow: 0px 5px 60px rgba(255, 255, 255, 0.4);
 	}
-	.search-box{
+	.search-box {
 		margin: 5rem;
 	}
 }
-.location-box{
-	.location{
+.location-box {
+	.location {
 		text-align: center;
 		font-size: 3rem;
 		font-weight: 500;
-		@include textShadow(3px,3px,rgba(50,50,70,0.5) )
+		@include textShadow(3px, 3px, rgba(50, 50, 70, 0.5));
 	}
-	.date{
+	.date {
 		padding: 0.5rem;
 		text-align: center;
 		font-size: 1.5rem;
 		font-weight: 300;
 		font-style: italic;
-		@include textShadow(2px,2px,rgba(50,50,70,0.5) )
+		@include textShadow(2px, 2px, rgba(50, 50, 70, 0.5));
 	}
 }
 
-.weather-details{
+.weather-details {
 	.temperature {
 		margin: 1rem 0 0 0.5rem;
 		padding: 1rem;
 		font-size: 3rem;
 		text-align: center;
-		@include textShadow(2px,2px,rgba(50,50,70,1) )
+		@include textShadow(2px, 2px, rgba(50, 50, 70, 1));
 	}
-	.weather{
+	.weather {
 		@extend .temperature;
 		padding: 0;
 		margin: 0;
-		font-weight: 700;	
-		font-size: 1.5rem;;
-
+		font-weight: 700;
+		font-size: 1.5rem;
 	}
 }
 
-.warning-msg{
+.warning-msg {
 	color: #{$secondary};
 	text-align: center;
 }
-
