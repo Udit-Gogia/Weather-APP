@@ -5,13 +5,14 @@ function setDate() {
 	var month = date.getMonth();
 	var year = date.getFullYear();
 	var days = [
+		"Sunday",
 		"Monday",
 		"Tuesday",
 		"Wednesday",
 		"Thursday",
 		"Friday",
-		"Saturday",
-		"Sunday",
+		"Saturday"
+		
 	];
 	var months = [
 		"January",
