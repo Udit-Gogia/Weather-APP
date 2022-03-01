@@ -29,15 +29,7 @@ body {
 	display: flex;
 	justify-content: center;
 
-	@media (min-width: 350px) and (max-width: 1200px) {
-		background: url(#{$phonebg}.jpg);
-		display: flex;
-		justify-content: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-		height: 100vh;
-		width: 100vw;
-	}
+	
 }
 
 .main {
